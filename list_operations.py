@@ -202,8 +202,9 @@ def delete_third_and_seventh(input_list):
     True
 
     """
-
-    pass
+    del input_list[2]
+    del input_list[-2]
+    #ask how to del on single line or if .pop() is more applicable 
 
 
 def delete_middle(input_list):
@@ -220,7 +221,7 @@ def delete_middle(input_list):
 
     """
 
-    pass
+    del input_list[2:-2]
 
 
 ##############################################################################
