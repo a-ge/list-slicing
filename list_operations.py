@@ -22,9 +22,7 @@ DO NOT USE ANY OF THE BUILT IN LIST METHODS, OR len()!
 def head(input_list):
     """Return the first element of the input list.
 
-    For example:
-
-    'Jan'
+   Index [0] represents first element in input_list
 
     """
     return input_list[0]
@@ -37,7 +35,8 @@ def tail(input_list):
 
     >>> tail(['Jan', 'Feb', 'Mar'])
     ['Feb', 'Mar']
-
+    
+    Index [0] is excluded so begins at index [1] and continues through entire list
     """
 
     return input_list[1:]
@@ -51,6 +50,7 @@ def last(input_list):
     >>> last(['Jan', 'Feb', 'Mar'])
     'Mar'
 
+    Index [-1] refers to last index
     """
 
     return input_list[-1]
@@ -64,6 +64,7 @@ def init(input_list):
     >>> init(['Jan', 'Feb', 'Mar'])
     ['Jan', 'Feb']
 
+    Begins from first element throughout second to last element
     """
 
     return input_list[:-1]
