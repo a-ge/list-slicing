@@ -24,12 +24,10 @@ def head(input_list):
 
     For example:
 
-    >>> head(['Jan', 'Feb', 'Mar'])
     'Jan'
 
     """
-
-    return None
+    return input_list[0]
 
 
 def tail(input_list):
@@ -42,7 +40,7 @@ def tail(input_list):
 
     """
 
-    return []
+    return input_list[1:]
 
 
 def last(input_list):
@@ -55,7 +53,7 @@ def last(input_list):
 
     """
 
-    return []
+    return input_list[-1]
 
 
 def init(input_list):
@@ -68,7 +66,7 @@ def init(input_list):
 
     """
 
-    return []
+    return input_list[:-1]
 
 
 ##############################################################################
@@ -84,7 +82,7 @@ def first_three(input_list):
 
     """
 
-    return []
+    return input_list[:3]
 
 
 def last_five(input_list):
@@ -97,7 +95,7 @@ def last_five(input_list):
 
     """
 
-    return []
+    return input_list[-5:]
 
 
 def middle(input_list):
