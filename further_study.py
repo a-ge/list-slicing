@@ -136,10 +136,10 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
-    #input_list[2:3] = []   #alternate method that dump values into empty list; NOT RETRIEVABLE ITEMS
-    del input_list[2:3]
-    return input_list
-
+    
+    alt_month = input_list[-1]   
+    del input_list[-1]
+    return alt_month
 
 def custom_index(input_list, value):
     """Return the index of the first item of value found in input_list.
@@ -193,8 +193,11 @@ def custom_reverse(input_list):
         True
 
     """
-
-    pass
+    #COME BACK 
+    a = input_list[0]  
+    input_list[0] = input_list[-1] 
+    new_list = input_list[::-1]
+    #print(input_list)
 
 
 def custom_contains(input_list, value):
@@ -213,8 +216,12 @@ def custom_contains(input_list, value):
         True
 
     """
+    for i, item in enumerate(input_list):
+        if item == value:
+            return True
+    return False
 
-    return None
+    #return None
 
 
 def custom_equality(some_list, another_list):
@@ -232,9 +239,14 @@ def custom_equality(some_list, another_list):
         False
 
     """
+    
+    for i, items in enumerate(some_list):
+        if some_list[i] != another_list[i]:
+            return False 
 
-    return None
+    return True
 
+    
 
 ##############################################################################
 # Please ask for a code review. Also, give your partner a high-five!
