@@ -99,7 +99,7 @@ def custom_insert(input_list, index, value):
 
     """
 
-    pass
+    input_list[1:1] = ['Feb']
 
 
 def custom_remove(input_list, value):
@@ -118,7 +118,7 @@ def custom_remove(input_list, value):
 
     """
 
-    pass
+    del input_list[0]
 
 
 def custom_pop(input_list):
@@ -136,8 +136,9 @@ def custom_pop(input_list):
         ['Jan', 'Feb']
 
     """
-
-    return None
+    #input_list[2:3] = []   #alternate method that dump values into empty list; NOT RETRIEVABLE ITEMS
+    del input_list[2:3]
+    return input_list
 
 
 def custom_index(input_list, value):
@@ -152,8 +153,9 @@ def custom_index(input_list, value):
         1
 
     """
-
-    return 0
+    for i, item in enumerate(input_list):
+        if item == value:
+            return i
 
 
 def custom_count(input_list, value):
@@ -168,8 +170,12 @@ def custom_count(input_list, value):
         2
 
     """
+    count = 0
+    for i, item in enumerate(input_list):
+        if item == value:
+            count += 1
+    return count
 
-    return 0
 
 
 def custom_reverse(input_list):
